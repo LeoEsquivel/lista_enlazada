@@ -1,6 +1,3 @@
-import random
-
-
 def reversed_list( values ) :
 
 
@@ -31,7 +28,7 @@ class LinkedList:
 			self.head = node
 		else:
 			next_node = self.head
-			while next_node is not None:
+			while next_node.next is not None:
 				next_node = next_node.next
 			next_node.next = node 
 
@@ -45,7 +42,7 @@ class LinkedList:
 		nextNode = None
 
 
-		while currentNode != None:
+		while currentNode is not None:
 			nextNode = currentNode.next
 			currentNode.next = prevNode
 			prevNode = currentNode
@@ -65,7 +62,7 @@ class LinkedList:
 		"""
 		linked_list_as_list = []
 		next_node = self.head
-		while next_node != None:
+		while next_node is not None:
 			linked_list_as_list.append(next_node.value)
 			next_node = next_node.next
 		return linked_list_as_list
